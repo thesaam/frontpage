@@ -14,6 +14,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--background);
+  width: 100%;
+  height: 100%;
 }
 
 .p-0 {
@@ -32,18 +34,34 @@ label {
   display: block;
 }
 
-#container {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 10px 30px;
   width: 100%;
-  height: 80vh;
+  background: var(--primary-color);
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 .left {
   background: var(--secondary-color);
-  height: 100%;
   flex-basis: 40%;
   border: 2px var(--primary-color) solid;
 }
@@ -60,25 +78,24 @@ label {
 
 .right {
   background: #fff;
-  position: relative;
   flex-basis: 60%;
   height: 100%;
   color: var(--primary-color);
-  padding-left: 3rem;
-  padding-top: 1rem;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding-left: 4rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
   border: 2px var(--primary-color) solid;
 }
 
 .right header {
+  display: flex;
+  justify-content: space-between;
   padding: 10px 0px;
 }
 
 .right .line {
   width: 100%;
   height: 2px;
-  margin: 10px 0px;
   background: var(--primary-color);
 }
 
@@ -131,11 +148,9 @@ label {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px;
   margin-right: 40px;
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 20px;
 }
 
 .right .text .sign {
@@ -157,6 +172,48 @@ label {
   color: #f4f4f4;
 }
 
+.bottom {
+  background: var(--primary-color);
+  text-align: center;
+  color: #fff;
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.bottom .logo1 {
+  padding: 20px;
+}
+
+.bottom .links {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.bottom .links i {
+  padding: 10px 15px;
+}
+
+.bottom .links i:nth-child(3) {
+  color: var(--primary-color);
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.bottom .btm-line {
+  margin: 5px auto;
+  width: 60%;
+  height: 2px;
+  background: #fff;
+}
+
+.bottom .btm-text {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
 @media(max-width: 500px) {
 
   .p-0 {
@@ -169,6 +226,15 @@ label {
 
   .p-2 {
     padding: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right header {
+    flex-direction: column;
   }
 
   #container {
@@ -194,7 +260,7 @@ label {
   
   .right {
     width: 100%;
-    height: 200vh;
+    height: 100%;
     border: none;
     border-radius: 0px;
     padding: 16px 40px;
@@ -213,6 +279,7 @@ label {
     display: flex;
     justify-content: center;
     padding: 0;
+    width: 100%;
     align-items: center;
     margin: 20px 0px;
     font-weight: bold;
@@ -236,6 +303,7 @@ label {
   .right .noflex input {
     width: 100%;
   }
+
 }
 
 
